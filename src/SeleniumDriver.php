@@ -18,16 +18,14 @@ class SeleniumDriver implements DriverInterface
         try {
             $this->instance = RemoteWebDriver::create($options['server_url'], DesiredCapabilities::chrome());
 
-            //$this->handleOptions($options);
+            $this->handleOptions($options);
 
             $this->instance->get($target);
 
             $html = $this->instance->findElement(WebDriverBy::tagName('html'))->getDomProperty('innerHTML');
         } catch(\Exception $e) {
-            //print_r($e);
-            throw new \Exception($e);
-        } finally {
-        }
+            // do nothing
+        } 
 
         return $html;
     }
@@ -37,8 +35,8 @@ class SeleniumDriver implements DriverInterface
         $this->instance->quit();
     }
 
-    // TODO
-    protected function handleOptions() {
+    // TODO: handle selenium options
+    protected function handleOptions($options) {
         $chromeOptions = new ChromeOptions();
         $chromeOptions->addArguments(['--headless']);
 

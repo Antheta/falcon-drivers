@@ -1,6 +1,6 @@
 {
-    "name": "antheta/selenium",
-    "description": "Selenium driver for Falcon.",
+    "name": "antheta/drivers",
+    "description": "Drivers pack for Falcon.",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -8,14 +8,7 @@
             "Antheta\\Drivers\\": "src/"
         }
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../email-crawler"
-        }
-    ],
     "require": {
-        "antheta/falcon": "dev-main",
         "duzun/hquery": "^3.0",
         "php-webdriver/webdriver": "^1.14",
         "voku/simple_html_dom": "^4.8"

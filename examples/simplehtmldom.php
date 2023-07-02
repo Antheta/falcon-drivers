@@ -3,7 +3,6 @@
 require_once dirname(__DIR__) . "/vendor/autoload.php";
 
 use Antheta\Falcon\Falcon;
-use Facebook\WebDriver\WebDriverBy;
 
 $falcon = Falcon::getInstance();
 
@@ -13,6 +12,6 @@ $falcon->addDrivers([
 
 $falcon->useDriver('simplehtmldom');
 
-$falcon->run('https://marcosraudkett.com');
+$falcon->run('...');
 
 print_r($falcon->parse()->results());

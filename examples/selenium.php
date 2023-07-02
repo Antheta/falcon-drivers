@@ -17,22 +17,11 @@ $falcon->addOptions([
     "server_url" => "localhost:4444" // selenium server url
 ]);
 
-$falcon->run('https://iltalehti.fi');
+$falcon->run('...');
 
-// test
-//$selenium = $falcon->getDriverInstance();
-//$selenium->manage()->timeouts()->implicitlyWait(10);
-
-$p = $falcon->getDriverInstance()->findElement(WebDriverBy::cssSelector('.il-footer-links'))
-    ->getText();
-    //->click();
-
-print_r("TEXT:");
-print_r($p);
+$p = $falcon->getDriverInstance()->findElement(WebDriverBy::cssSelector('html'))->getText();
 
 // quit
 $falcon->getDriverInstance()->quit();
 
-//$falcon->run('http://127.0.0.1/email-crawler/examples/tmp/index.html');
-
-//print_r($falcon->parse()->results());
+print_r($falcon->parse()->results());
