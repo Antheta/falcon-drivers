@@ -2,18 +2,15 @@
 
 ## Prerequisites
 
-[Falcon](https://github.com/Antheta/falcon-php) is required for using this driver.
+[Falcon](https://github.com/Antheta/falcon-php) is required for using any of these drivers.
 
 
 ## Installation
 ```bash
-composer require antheta/falcon-selenium-driver
+composer require antheta/falcon-drivers
 ```
 
 ## Drivers
-
-- [simple_html_dom](https://github.com/voku/simple_html_dom)
-- [selenium](https://github.com/php-webdriver/php-webdriver)
 
 ### simple_html_dom
 
@@ -21,7 +18,5 @@ composer require antheta/falcon-selenium-driver
 
 
 ### selenium
-
-Falcon's selenium driver is a wrapper for [php-webdriver/webdriver](https://github.com/php-webdriver/php-webdriver).
 
 [Documentation](https://falcon-scraper.readme.io/reference/selenium)
