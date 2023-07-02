@@ -1,0 +1,15 @@
+{
+    "name": "antheta/selenium",
+    "description": "Selenium driver for Falcon.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Antheta\\Selenium\\": "src/"
+        }
+    },
+    "require": {
+        "duzun/hquery": "^3.0",
+        "php-webdriver/webdriver": "^1.14"
+    }
+}
