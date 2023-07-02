@@ -1,8 +1,4 @@
-# Selenium Driver for Falcon
-
-Falcon's selenium driver is a wrapper for [php-webdriver/webdriver](https://github.com/php-webdriver/php-webdriver).
-
-[Documentation](https://falcon-scraper.readme.io/reference/selenium)
+# Drivers for Falcon
 
 ## Prerequisites
 
@@ -14,7 +10,35 @@ Falcon's selenium driver is a wrapper for [php-webdriver/webdriver](https://gith
 composer require antheta/falcon-selenium-driver
 ```
 
-## Usage
+## Drivers
+
+- [simple_html_dom](https://github.com/voku/simple_html_dom)
+- [selenium](https://github.com/php-webdriver/php-webdriver).
+
+### simple_html_dom
+
+#### Usage
+The SeleniumDriver has to be added to Falcon in order to use selenium:
+```php
+$falcon = Falcon::getInstance();
+
+$falcon->addDrivers([
+    "simplehtmldom" => \Antheta\Drivers\SimpleHtmlDomDriver::class
+]);
+
+$falcon->useDriver('simplehtmldom');
+
+$falcon->parse()->results();
+```
+
+
+### selenium
+
+Falcon's selenium driver is a wrapper for [php-webdriver/webdriver](https://github.com/php-webdriver/php-webdriver).
+
+[Documentation](https://falcon-scraper.readme.io/reference/selenium)
+
+#### Usage
 The SeleniumDriver has to be added to Falcon in order to use selenium:
 ```php
 $falcon = Falcon::getInstance();
@@ -43,7 +67,3 @@ $falcon->getDriverInstance()->quit();
 
 $falcon->parse()->results();
 ```
-
-## Selenium options
-
-to be documented...

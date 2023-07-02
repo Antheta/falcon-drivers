@@ -1,6 +1,6 @@
 <?php 
 
-namespace Antheta\Selenium;
+namespace Antheta\Drivers;
 
 use Antheta\Falcon\Drivers\Interfaces\DriverInterface;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
@@ -24,7 +24,7 @@ class SeleniumDriver implements DriverInterface
 
             $html = $this->instance->findElement(WebDriverBy::tagName('html'))->getDomProperty('innerHTML');
         } catch(\Exception $e) {
-            print_r($e);
+            //print_r($e);
             throw new \Exception($e);
         } finally {
         }
