@@ -1,5 +1,7 @@
 # Drivers for Falcon
 
+Read more about Falcon drivers [here](https://docs.antheta.com/falcon/drivers).
+
 ## Prerequisites
 
 [Falcon](https://github.com/Antheta/falcon-php) is required for using any of these drivers.
@@ -14,9 +16,9 @@ composer require antheta/falcon-drivers
 
 ### simple_html_dom
 
-[Documentation](https://falcon-scraper.readme.io/reference/simple-html-dom)
+[Documentation](https://docs.antheta.com/falcon/drivers/simple-html-dom)
 
 
 ### selenium (work in progress)
 
-[Documentation](https://falcon-scraper.readme.io/reference/selenium)
+[Documentation](https://docs.antheta.com/falcon/drivers/selenium)
